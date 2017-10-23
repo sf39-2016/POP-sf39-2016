@@ -1,2 +1,7 @@
 c:\users\temp.ftn.004\documents\visual studio 2015\Projects\POP-sf39-2016\POP-sf39-2016\bin\Debug\POP-sf39-2016.exe.config
 C:\Temp\SF39-2016\POP-sf39-2016\bin\Debug\POP-sf39-2016.exe.config
+C:\Temp\SF39-2016\POP-sf39-2016\bin\Debug\POP-sf39-2016.exe
+C:\Temp\SF39-2016\POP-sf39-2016\bin\Debug\POP-sf39-2016.pdb
+C:\Temp\SF39-2016\POP-sf39-2016\obj\Debug\POP-sf39-2016.csprojResolveAssemblyReference.cache
+C:\Temp\SF39-2016\POP-sf39-2016\obj\Debug\POP-sf39-2016.exe
+C:\Temp\SF39-2016\POP-sf39-2016\obj\Debug\POP-sf39-2016.pdb
