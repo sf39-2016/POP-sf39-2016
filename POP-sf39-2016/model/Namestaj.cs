@@ -8,10 +8,10 @@ namespace POP_sf39_2016.model
 {
     public class Namestaj
     {
-
+        public int Id { get; set; }
         public string NazivNamestaja { get; set; }
 
-        public int Sifra { get; set; }
+        public string Sifra { get; set; }
 
         public double CenaKomad { get; set; }
 

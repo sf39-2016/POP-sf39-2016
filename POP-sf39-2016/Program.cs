@@ -36,7 +36,8 @@ namespace POP_sf39_2016
             TipoviN.Add(tn1);
             var n1 = new Namestaj()
             {
-                Sifra = 151,
+                Id = 1,
+                Sifra = "151",
                 TipNamestaja = tn1,
                 NazivNamestaja = "Ikea Krevet",
                 BrKomada =41,
@@ -62,9 +63,6 @@ namespace POP_sf39_2016
             switch (izbor)
             {
                 case 1:
-                    Console.WriteLine("1111111");
-                    break;
-                case 2:
                     IspisiMeniNamestaja();
                     break;
                 case 0:
@@ -105,33 +103,58 @@ namespace POP_sf39_2016
         {
             
             Console.WriteLine("Izlistavanje namestaja");
-            for(int i=0; i<Namestaj.Count; i++)
+            for (int i = 0; i < Namestaj.Count; i++)
             {
-                Console.WriteLine($"(i+1).{Namestaj[i].NazivNamestaja},cena:{Namestaj[i].CenaKomad}");
+                if (!Namestaj[i].Obrisan)
+                {
+                    Console.WriteLine($"{i+1}.{Namestaj[i].NazivNamestaja},cena:{Namestaj[i].CenaKomad}");
+                }
             }
+            IspisiMeniNamestaja();
         }
         private static void DodajNoviNamestaj()
         {
+            TipNamestaja TrazeniTipNamestaja = null;
+            Namestaj NoviNamestaj = new Namestaj();
+            NoviNamestaj.Id= Namestaj.Count + 1;
             Console.WriteLine("Unesite naziv namestaja");
-            string Naziv = Console.ReadLine();
-            Console.WriteLine("Unesite Sifru");
-            int Sifra = int.Parse(Console.ReadLine());
+            NoviNamestaj.NazivNamestaja = Console.ReadLine();
+            Console.WriteLine("Unesite sifru namestaja");
+            NoviNamestaj.Sifra = Console.ReadLine();
             Console.WriteLine("Unesite cenu");
-            double Cena = double.Parse(Console.ReadLine());
-            Console.WriteLine("Unesite tip namestaja");
-            string z = Console.ReadLine();
-            foreach (TipNamestaja T in TipoviN)
+            NoviNamestaj.CenaKomad = double.Parse(Console.ReadLine());
+            do
             {
-                Console.WriteLine(T.Naziv+"...."+z);
-                if (z.Equals(T.Naziv)) {
+                Console.WriteLine("Unesite tip namestaja");
+                string UnetiTip = Console.ReadLine();
 
-                    TipNamestaja TipNamestajaaaaa = T;
-                    Console.WriteLine(TipNamestajaaaaa.Naziv);
-                    Console.ReadLine();
+
+                foreach (TipNamestaja Tip in TipoviN)
+                {
+                    if (UnetiTip.Equals(Tip.Naziv))
+                    {
+                        TrazeniTipNamestaja = Tip;
+                        
                     }
+                }
+            } while (TrazeniTipNamestaja == null);
+            NoviNamestaj.TipNamestaja = TrazeniTipNamestaja;
+            Namestaj.Add(NoviNamestaj);
+            IspisiMeniNamestaja();
+        }
+        private static void IzmenaNamestaja()
+        {
+            Namestaj namestajZaIzmenu = null
+            Console.WriteLine("Unesite ime namestaja koji zelite da izmenite");
+            string nazivTrazenogNamestaja = Console.ReadLine();
+            foreach (Namestaj trenutniNamestaj in Namestaj)
+            {
+                if (trenutniNamestaj.NazivNamestaja.Equals(nazivTrazenogNamestaja))
+                {
+                    namestajZaIzmenu = trenutniNamestaj;
+                }
             }
-            
-
+            Console.WriteLine("Sta zelite da izmenite?");
         }
     }
     
