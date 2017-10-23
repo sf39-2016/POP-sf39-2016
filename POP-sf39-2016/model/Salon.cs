@@ -12,7 +12,7 @@ namespace POP_sf39_2016.model
 
         public bool Obrisan { get; set; }
 
-        public string Ime { get; set; }
+        public string Naziv { get; set; }
 
         public string Adresa { get; set; }
 
