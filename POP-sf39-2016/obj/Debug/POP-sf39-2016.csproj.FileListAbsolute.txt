@@ -5,3 +5,10 @@ C:\Temp\SF39-2016\POP-sf39-2016\bin\Debug\POP-sf39-2016.pdb
 C:\Temp\SF39-2016\POP-sf39-2016\obj\Debug\POP-sf39-2016.csprojResolveAssemblyReference.cache
 C:\Temp\SF39-2016\POP-sf39-2016\obj\Debug\POP-sf39-2016.exe
 C:\Temp\SF39-2016\POP-sf39-2016\obj\Debug\POP-sf39-2016.pdb
+D:\Skola\Fax\VisualStudioWorkspace\POP-sf39-2016\POP-sf39-2016\obj\Debug\POP-sf39-2016.csprojResolveAssemblyReference.cache
+D:\Skola\Fax\VisualStudioWorkspace\POP-sf39-2016\POP-sf39-2016\obj\Debug\POP-sf39-2016.csproj.CoreCompileInputs.cache
+D:\Skola\Fax\VisualStudioWorkspace\POP-sf39-2016\POP-sf39-2016\obj\Debug\POP-sf39-2016.exe
+D:\Skola\Fax\VisualStudioWorkspace\POP-sf39-2016\POP-sf39-2016\obj\Debug\POP-sf39-2016.pdb
+D:\Skola\Fax\VisualStudioWorkspace\POP-sf39-2016\POP-sf39-2016\bin\Debug\POP-sf39-2016.exe.config
+D:\Skola\Fax\VisualStudioWorkspace\POP-sf39-2016\POP-sf39-2016\bin\Debug\POP-sf39-2016.exe
+D:\Skola\Fax\VisualStudioWorkspace\POP-sf39-2016\POP-sf39-2016\bin\Debug\POP-sf39-2016.pdb
