@@ -54,7 +54,7 @@ namespace POP_sf39_2016
 
             ListaKorisnika.Add(k1);
             //GenericSerializer.Serialize<Namestaj>("namestaj.xml", ListaNamestaja);
-            GenericSerializer.Serialize<TipNamestaja>("tipnamestaja.xml", ListaTipoviNamestaja);
+            //GenericSerializer.Serialize<TipNamestaja>("tipnamestaja.xml", ListaTipoviNamestaja);
 
 
 
