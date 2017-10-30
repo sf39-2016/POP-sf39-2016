@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using POP_sf39_2016.util;
 
 namespace POP_sf39_2016
 {
     class Program
     {
-        public static List<Namestaj> ListaNamestaja { get; set; } = new List<Namestaj>();
+        public static List<Namestaj> ListaNamestaja { get; set; } 
         public static List<TipNamestaja> ListaTipoviNamestaja { get; set; } = new List<TipNamestaja>();
         public static List<Korisnik> ListaKorisnika { get; set; } = new List<Korisnik>();
         static void Main(string[] args)
@@ -38,17 +39,7 @@ namespace POP_sf39_2016
                 Naziv = "Stolica",
             };
             ListaTipoviNamestaja.Add(tn2);
-            var n1 = new Namestaj()
-            {
-                Id = 1,
-                Sifra = "151",
-                TipNamestaja = tn1,
-                NazivNamestaja = "Ikea Krevet",
-                BrKomada = 41,
-                CenaKomad = 1541.2,
 
-            };
-            ListaNamestaja.Add(n1);
 
             var k1 = new Korisnik()
             {
@@ -60,7 +51,47 @@ namespace POP_sf39_2016
                 Lozinka = "1234",
                 TipKorisnika = TipKorisnika.Prodavac,
             };
+
             ListaKorisnika.Add(k1);
+            //GenericSerializer.Serialize<Namestaj>("namestaj.xml", ListaNamestaja);
+            GenericSerializer.Serialize<TipNamestaja>("tipnamestaja.xml", ListaTipoviNamestaja);
+
+
+
+            ListaNamestaja = Projekat.Instance.Namestaj;
+            ListaNamestaja.Add(new Namestaj(){ Id=1,NazivNamestaja="Proba123"});
+            //ListaNamestaja.RemoveAt(ListaNamestaja.Count - 1);
+            Projekat.Instance.Namestaj = ListaNamestaja;
+            foreach(var item in ListaNamestaja)
+            {
+                Console.WriteLine(item.NazivNamestaja);
+            }
+
+
+
+            
+            var listaa = Projekat.Instance.TipNamestaja;
+            Projekat.Instance.TipNamestaja = listaa;
+            foreach (var item in listaa)
+            {
+                Console.WriteLine(item.Naziv);
+            }
+
+
+
+            Console.WriteLine("Serialization..");
+           
+            //GenericSerializer.Serialize<TipNamestaja>("tipnamestaja.xml", ListaTipoviNamestaja);
+            //List<Namestaj> procitanaLista = GenericSerializer.Deserialize<Namestaj>("namestaj.xml");
+            //Console.WriteLine("Finished serialization..");
+
+            //for (int i = 0; i < procitanaLista.Count(); i++)
+            //{
+            //    Console.WriteLine(procitanaLista[i].NazivNamestaja);
+            //}
+
+
+            
             Console.WriteLine("Dobrodosli");
             Login();
             IspisGlavnogMenija();
@@ -421,6 +452,7 @@ namespace POP_sf39_2016
         private static void Login()
         {
             bool korisnikLogin = false;
+            int pokusaj = 0;
             do
             {
                 Console.WriteLine("Unesite vase korisnicko ime");
@@ -430,6 +462,10 @@ namespace POP_sf39_2016
                 foreach (Korisnik trenutniKorisnik in ListaKorisnika)
                     if (trenutniKorisnik.KorisnickoIme == korisnickoIme & trenutniKorisnik.Lozinka == sifra && trenutniKorisnik.Obrisan!=true)
                         korisnikLogin = true;
+                pokusaj++;
+                if (pokusaj >= 3)
+                    Environment.Exit(0);
+
 
             } while (korisnikLogin == false);
             Console.WriteLine();
@@ -572,5 +608,6 @@ namespace POP_sf39_2016
             Console.WriteLine("Korisnik je obrisan \n");
             IspisMeniKorisnici();
         }
+
     }
 }

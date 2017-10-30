@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfNamestaj xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Namestaj>
+    <Id>1</Id>
+    <NazivNamestaja>Ikea Krevet</NazivNamestaja>
+    <Sifra>151</Sifra>
+    <CenaKomad>1541.2</CenaKomad>
+    <BrKomada>41</BrKomada>
+    <TipNamestaja>
+      <Id>1</Id>
+      <Obrisan>false</Obrisan>
+      <Naziv>Krevet</Naziv>
+    </TipNamestaja>
+    <AkcijaID xsi:nil="true" />
+    <TipNamestajaId xsi:nil="true" />
+    <Obrisan>false</Obrisan>
+  </Namestaj>
+  <Namestaj>
+    <Id>1</Id>
+    <NazivNamestaja>Proba123</NazivNamestaja>
+    <CenaKomad>0</CenaKomad>
+    <BrKomada>0</BrKomada>
+    <AkcijaID xsi:nil="true" />
+    <TipNamestajaId xsi:nil="true" />
+    <Obrisan>false</Obrisan>
+  </Namestaj>
+  <Namestaj>
+    <Id>1</Id>
+    <NazivNamestaja>Proba123</NazivNamestaja>
+    <CenaKomad>0</CenaKomad>
+    <BrKomada>0</BrKomada>
+    <AkcijaID xsi:nil="true" />
+    <TipNamestajaId xsi:nil="true" />
+    <Obrisan>false</Obrisan>
+  </Namestaj>
+  <Namestaj>
+    <Id>1</Id>
+    <NazivNamestaja>Proba123</NazivNamestaja>
+    <CenaKomad>0</CenaKomad>
+    <BrKomada>0</BrKomada>
+    <AkcijaID xsi:nil="true" />
+    <TipNamestajaId xsi:nil="true" />
+    <Obrisan>false</Obrisan>
+  </Namestaj>
+</ArrayOfNamestaj>

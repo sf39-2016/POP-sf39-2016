@@ -19,6 +19,10 @@ namespace POP_sf39_2016.model
 
         public TipNamestaja TipNamestaja { get; set; }
 
+        public int? AkcijaID { get; set; }
+
+        public int? TipNamestajaId { get; set; }
+
         public bool Obrisan { get; set; }
 
     }

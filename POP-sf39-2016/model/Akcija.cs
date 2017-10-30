@@ -15,7 +15,7 @@ namespace POP_sf39_2016.model
         public int Id { get; set; }
 
         public bool Obrisan { get; set; }
-
+        //List<int> NamestajID umesto ovog dole
         public List<Namestaj> NamestajNaPopustu { get; set; }
 
         public double Popust { get; set; }
